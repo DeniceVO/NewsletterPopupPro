@@ -9,12 +9,12 @@
 ## 📋 Spis treści
 
 - [Opis](#opis)
-- [Funkcjonalności](#funkcjonalności)
-- [Instalacja](#instalacja)
-- [Konfiguracja](#konfiguracja)
-- [Struktura plików](#struktura-plików)
-- [API dla deweloperów](#api-dla-deweloperów)
-- [Wymagania](#wymagania)
+- [Funkcjonalności](-#funkcjonalności)
+- [Instalacja](-#instalacja)
+- [Konfiguracja](-#konfiguracja)
+- [Struktura plików](-#struktura-plików)
+- [API dla deweloperów](-#api-dla-deweloperów)
+- [Wymagania](-#wymagania)
 
 ## 📝 Opis
 
