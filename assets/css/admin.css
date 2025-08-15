@@ -1,0 +1,63 @@
+/* assets/css/admin.css */
+
+.npp-export {
+    margin-top: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-left: 4px solid #007cba;
+    border-radius: 4px;
+}
+
+.npp-export h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #23282d;
+}
+
+.wp-list-table .column-id {
+    width: 60px;
+}
+
+.wp-list-table .column-email {
+    width: 30%;
+}
+
+.wp-list-table .column-ip_address {
+    width: 150px;
+}
+
+.wp-list-table .column-created_at {
+    width: 180px;
+}
+
+.wp-list-table .column-actions {
+    width: 100px;
+}
+
+.npp-stats {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.npp-stat-card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    flex: 1;
+    text-align: center;
+}
+
+.npp-stat-card h4 {
+    margin: 0 0 10px 0;
+    color: #666;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.npp-stat-card .npp-stat-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #007cba;
+}

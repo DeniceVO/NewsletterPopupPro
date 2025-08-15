@@ -1,0 +1,218 @@
+/* assets/css/frontend.css */
+
+/* Nakładka */
+.npp-popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.npp-popup-overlay.npp-show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Kontener popup-a */
+.npp-popup {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    max-width: 450px;
+    width: 90%;
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+}
+
+.npp-popup-overlay.npp-show .npp-popup {
+    transform: translateY(0);
+}
+
+/* Przycisk zamykania */
+.npp-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    font-size: 32px;
+    line-height: 1;
+    color: #999;
+    cursor: pointer;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.npp-close:hover {
+    color: #333;
+}
+
+/* Treść */
+.npp-content {
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.npp-content h2 {
+    margin: 0 0 15px 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2;
+}
+
+.npp-content > p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Formularz */
+.npp-form {
+    margin: 0;
+}
+
+.npp-form-group {
+    margin-bottom: 20px;
+}
+
+.npp-input {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    background: #fff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box;
+}
+
+.npp-input:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+}
+
+.npp-input.npp-error {
+    border-color: #f44336;
+}
+
+/* Przycisk wysyłania */
+.npp-submit {
+    width: 100%;
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.npp-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+.npp-submit:active {
+    transform: translateY(0);
+}
+
+.npp-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.npp-submit.npp-loading {
+    color: transparent;
+}
+
+.npp-submit.npp-loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: npp-spinner 0.8s linear infinite;
+}
+
+@keyframes npp-spinner {
+    to { transform: rotate(360deg); }
+}
+
+/* Wiadomości */
+.npp-message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+    display: none;
+}
+
+.npp-message.npp-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.npp-message.npp-error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+/* Tekst prywatności */
+.npp-privacy {
+    margin: 20px 0 0 0;
+    font-size: 12px!important;
+    color: #999;
+    line-height: 1.4;
+}
+
+/* Responsywność */
+@media (max-width: 480px) {
+    .npp-popup {
+        width: 95%;
+        margin: 10px;
+    }
+
+    .npp-content {
+        padding: 30px 20px;
+    }
+
+    .npp-content h2 {
+        font-size: 24px;
+    }
+
+    .npp-input,
+    .npp-submit {
+        font-size: 16px;
+    }
+}
