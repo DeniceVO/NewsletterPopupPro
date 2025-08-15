@@ -8,7 +8,7 @@
 
 ## 📋 Spis treści
 
-- [Opis](#opis)
+- [Opis](#-opis)
 - [Funkcjonalności](#-funkcjonalności)
 - [Instalacja](#-instalacja)
 - [Konfiguracja](#-konfiguracja)
